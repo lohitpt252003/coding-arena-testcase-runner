@@ -1,0 +1,171 @@
+/* CodeEditor.css */
+
+/* General styling for the dark theme */
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: 'Fira Code', 'Source Code Pro', Monaco, "Courier New", monospace;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  
+  /* Container styling */
+  .CodeEditor-container {
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+    border-radius: 10px;
+    background: linear-gradient(145deg, #1e1e1e, #282828);
+    box-shadow: 5px 5px 15px #0a0a0a, -5px -5px 15px #3a3a3a;
+  }
+  
+  /* Headings */
+  h1, h2, h3 {
+    text-align: center;
+    color: #f78fb3;
+    margin: 10px 0;
+    text-shadow: 2px 2px 5px rgba(247, 143, 179, 0.5);
+  }
+  
+  /* Buttons */
+  button {
+    background: linear-gradient(145deg, #2a2a2a, #373737);
+    color: #e0e0e0;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 5px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.1);
+  }
+  
+  button:active {
+    transform: translateY(2px);
+  }
+  
+  /* Select Dropdown */
+  select {
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+    border: 1px solid #444;
+    padding: 8px;
+    margin: 10px 0;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  /* Textareas */
+  textarea {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    border: 1px solid #444;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    width: 100%;
+    font-family: 'Fira Code', 'Source Code Pro', Monaco, "Courier New", monospace;
+    resize: none;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  textarea:focus {
+    outline: none;
+    border: 1px solid #f78fb3;
+    box-shadow: 0px 0px 8px rgba(247, 143, 179, 0.8);
+  }
+  
+  /* Testcase Styling */
+  .CodeEditor-testcase-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .CodeEditor-testcase {
+    background: linear-gradient(145deg, #1e1e1e, #282828);
+    box-shadow: 5px 5px 15px #0a0a0a, -5px -5px 15px #3a3a3a;
+    border-radius: 10px;
+    padding: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .CodeEditor-testcase:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.1);
+  }
+  
+  .CodeEditor-testcase h2 {
+    color: #ffeaa7;
+  }
+  
+  /* Testcase Success/Failure */
+  .success {
+    border-left: 5px solid #00b894;
+  }
+  
+  .failure {
+    border-left: 5px solid #d63031;
+  }
+  
+  /* Message Display */
+  #CodeEditor-message {
+    text-align: center;
+    margin: 20px 0;
+    padding: 10px;
+    border-radius: 5px;
+    background: rgba(39, 174, 96, 0.1);
+  }
+  
+  #CodeEditor-total-testcase {
+    font-size: 20px;
+  }
+  
+  #CodeEditor-pass-testcases, #CodeEditor-fail-testcases {
+    font-size: 18px;
+  }
+  
+  /* Monaco Editor Styling */
+  .monaco-editor {
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .CodeEditor-testcase {
+    animation: fadeIn 0.5s ease;
+  }
+  
+  /* Toastify Custom Styling */
+  .Toastify__toast {
+    background: linear-gradient(145deg, #1e1e1e, #282828);
+    color: #e0e0e0;
+    border-radius: 5px;
+    font-family: 'Fira Code', 'Source Code Pro', Monaco, "Courier New", monospace;
+  }
+  
+  .Toastify__toast--success {
+    background-color: #2ecc71;
+  }
+  
+  .Toastify__toast--error {
+    background-color: #e74c3c;
+  }
+  
