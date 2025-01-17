@@ -1,0 +1,205 @@
+/* CodeEditor.css */
+
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: #1e1e2f;
+    font-family: 'Fira Code', 'Source Code Pro', Monaco, "Courier New", monospace;
+    color: #e0e0e0;
+    overflow-x: hidden;
+  }
+  
+  /* Code Editor Container */
+  .CodeEditor-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(145deg, #232336, #1b1b28);
+    border-radius: 15px;
+    animation: fadeIn 1s ease-in-out;
+    overflow: hidden;
+  }
+  
+  /* Title */
+  .CodeEditor-container h1 {
+    text-align: center;
+    color: #ff79c6;
+    text-shadow: 0px 2px 5px rgba(255, 121, 198, 0.8);
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    animation: slideDown 1s ease-out;
+  }
+  
+  /* Message */
+  #CodeEditor-message {
+    margin: 10px 0;
+    text-align: center;
+    background: #282a36;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.4);
+  }
+  
+  /* Buttons */
+  button {
+    font-family: inherit;
+    background: #44475a;
+    color: #f8f8f2;
+    border: 2px solid #6272a4;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background: #6272a4;
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0px 5px 10px rgba(98, 114, 164, 0.5);
+  }
+  
+  button:disabled {
+    background: #383838;
+    cursor: not-allowed;
+  }
+  
+  /* Testcase Section */
+  .CodeEditor-testcase-container {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .CodeEditor-testcase {
+    padding: 15px;
+    background: #282a36;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+    animation: fadeInUp 0.8s ease-in-out;
+  }
+  
+  .CodeEditor-testcase h2 {
+    color: #8be9fd;
+    font-size: 1.5rem;
+    text-shadow: 0px 1px 5px rgba(139, 233, 253, 0.6);
+  }
+  
+  textarea {
+    width: 100%;
+    background: #1e1e2f;
+    color: #e0e0e0;
+    border: 1px solid #44475a;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    resize: none;
+    font-size: 1rem;
+  }
+  
+  textarea:focus {
+    outline: none;
+    border: 1px solid #ff79c6;
+    box-shadow: 0px 0px 10px rgba(255, 121, 198, 0.5);
+  }
+  
+  /* Dropdowns */
+  select {
+    padding: 10px;
+    border: 2px solid #6272a4;
+    background: #44475a;
+    color: #f8f8f2;
+    border-radius: 8px;
+    margin: 10px 5px;
+    transition: all 0.3s ease;
+  }
+  
+  select:hover {
+    border-color: #ff79c6;
+    box-shadow: 0px 4px 8px rgba(255, 121, 198, 0.5);
+  }
+  
+  select option {
+    background: #282a36;
+    color: #f8f8f2;
+  }
+  
+  /* Toast Notifications */
+  .Toastify__toast {
+    background: #44475a !important;
+    color: #f8f8f2 !important;
+    border-radius: 10px !important;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+  }
+  
+  .Toastify__toast--success {
+    border-left: 5px solid #50fa7b !important;
+  }
+  
+  .Toastify__toast--error {
+    border-left: 5px solid #ff5555 !important;
+  }
+  
+  /* Editor */
+  textarea, .monaco-editor {
+    border-radius: 5px;
+  }
+  
+  .CodeEditor-addTestCase {
+    background: #50fa7b;
+    color: #282a36;
+  }
+  
+  .CodeEditor-addTestCase:hover {
+    background: #3fd764;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes slideDown {
+    from {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Success/Failure Styles */
+  .success {
+    background-color: rgba(80, 250, 123, 0.1);
+    border: 2px solid #50fa7b;
+  }
+  
+  .failure {
+    background-color: rgba(255, 85, 85, 0.1);
+    border: 2px solid #ff5555;
+  }
+  
