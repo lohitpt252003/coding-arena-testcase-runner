@@ -3,7 +3,10 @@ import { Editor } from '@monaco-editor/react';
 import { ToastContainer, toast } from 'react-toastify';
 import { FaCopy} from "react-icons/fa";
 import executeCode from '../../utils/codeExecution';
-import './CodeEditor.css';
+// import '../Themes/LightTheme.css';
+import '../Themes/DarkTheme.css';
+// import './CodeEditor.css';
+
 
 const CodeEditor = () => {
   const [testcases, setTestcases] = useState([]);
@@ -227,6 +230,7 @@ const CodeEditor = () => {
         autoClose={2000}
         hideProgressBar
       />
+      {/* <button type="button">Theme</button> */}
       <h1>CPH</h1>
       <div id="CodeEditor-message" style={{display: 'none'}}>
         <h1 id='CodeEditor-total-testcase'>Total Testcases: 0</h1>
